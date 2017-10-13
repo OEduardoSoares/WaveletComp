@@ -35,6 +35,8 @@ function(x, dt = 1, dj = 1/20,
   ## Define the Morlet wavelet transform function
   ###############################################################################
   
+  ## O foco de alteração está no código abaixo: ----       
+         
   morlet.wavelet.transform = function(x) {
 
     # Standardize x and pad with zeros
