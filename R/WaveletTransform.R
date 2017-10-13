@@ -11,7 +11,8 @@ function(x, dt = 1, dj = 1/20,
   pot2 = trunc(log2(series.length) + 0.5)
   pad.length = 2^(pot2+1)-series.length 
 
-  # Define central angular frequency omega0 and fourier factor:
+  # Define central angular frequency omega0 and fourier factor: 
+         #Modificar para encontrar o kq do artigo
   omega0 = 6
 #   fourier.factor   = (4*pi)/(omega0 + sqrt(2+omega0^2))
   fourier.factor = (2*pi)/omega0
