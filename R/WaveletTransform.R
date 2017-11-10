@@ -52,8 +52,14 @@ function(x, dt = 1, dj = 1/20,
     wave = matrix(0, nrow=scales.length, ncol=N)                 
     wave = wave + 1i*wave                   
     
-    # Computation for each scale...
-    # ... simultaneously for all time instances
+    # Computation for each scale... 
+    # ... simultaneously for all time instances 
+           # 1)Teorema da convolução, A transformada de Fourier de um produto de convolução 
+           # é igual ao produto das transformadas de Fourier dos elementos do produto 
+           # de convolução vezes uma constante
+           # 2) Produto entre a fft dos dados e da fft da equação da wavelet mae           
+           # 3) A transformada de Fourier inversa do produto "2" é igual a Wavelet
+        
     for (ind.scale in (1:scales.length)) {
         
          my.scale = scales[ind.scale]
