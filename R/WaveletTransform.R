@@ -27,6 +27,7 @@ function(x, dt = 1, dj = 1/20,
   periods = fourier.factor*scales          # sequence of periods
 
   # Computation of the angular frequencies
+         # omega.k é fundamental na transformada pois ele dá o tamanho da wavelet mae!
   N = series.length+pad.length
   omega.k = 1:floor(N/2)
   omega.k = omega.k * (2*pi)/(N*dt)                    # k <= N/2
